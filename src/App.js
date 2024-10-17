@@ -1,25 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import FoodContainer from './docs/map/basic/FoodContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <FoodContainer/>
+    </>
   );
 }
 
+// 컨트롤 + space 한다음 tab키를 써서 불러오기
+// 컨트로 + 클릭으로 빠른 이동
 export default App;
