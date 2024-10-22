@@ -1,10 +1,12 @@
 import './App.css';
-import FoodContainer from './docs/map/basic/FoodContainer';
+
+import CheckInput from './docs/ref/CheckInput';
+
 
 function App() {
   return (
     <>
-      <FoodContainer/>
+      <CheckInput/>
     </>
   );
 }
