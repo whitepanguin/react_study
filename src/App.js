@@ -1,12 +1,12 @@
 import './App.css';
+import FoodContainer from './docs/ref/expert/FoodContainer';
 
-import CheckInput from './docs/ref/CheckInput';
 
 
 function App() {
   return (
     <>
-      <CheckInput/>
+      <FoodContainer/>
     </>
   );
 }
