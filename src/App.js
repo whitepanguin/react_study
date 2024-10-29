@@ -1,12 +1,14 @@
 import './App.css';
+import ProductContainer from './docs/life-cycle/function/memoization/ProductContainer';
+import Styled01 from './pages/docs/_component/Styled01';
 
-import SideEffect from './docs/life-cycle/function/SideEffect';
+
 
 
 function App() {
   return (
     <>
-      <SideEffect/>
+      <Styled01/>
     </>
   );
 }
