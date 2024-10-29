@@ -6,10 +6,15 @@ import React, { useRef, useState } from 'react';
 const FoodContainer = () => {
     const [foods,setfoods] = useState([]);
     const inputRef = useRef([]);
+    const [checked, setChecked]= useState([]);
 
-    const foodList = foods.map(({kor, eng})=>{
+
+    const foodList = foods.map(({kor, eng},i)=>{
         return(
-            <li><input type="checkbox"/> {`${kor}(${eng})`}</li>
+            <li key={i}>
+                <input type="checkbox" checked={checked[i]} onChange={()=>onChangeCheckBox(i)} />
+                {`${kor}(${eng})`}
+            </li>
         );
     })
 
@@ -17,26 +22,22 @@ const FoodContainer = () => {
             setfoods(
                 foods.concat({
                  kor : inputRef.current[0].value,
-                 eng : inputRef.current[1].value,
-
-                }))
+                 eng : inputRef.current[1].value
+                })
+            )
+            setChecked(checked.concat(false));
     }
 
 
     const onClickToDel=()=>{
-        console.log("버튼 클릭!")
-
+        setfoods(foods.filter((food,i)=>!checked[i]))
+        setChecked(new Array(foods.length).fill(false))
     }
 
-    // const onClickToCheck=(e)=>{
-    //     console.log("로직 실행!")
-    //     let value = e.target.value;
-    //     if(e.target.checked){
-    //         setfoods(foods.concat(value))
-    //     }else{
-    //         setfoods(foods.filter((food) => food !== value))
-    //     }
-    // }
+    const onChangeCheckBox=(i)=>{
+        checked.splice(i,1,!checked[i])
+        setChecked(checked.concat());
+    }
 
    
    
