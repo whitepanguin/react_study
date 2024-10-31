@@ -12,8 +12,8 @@ const Styled01 = () => {
     return (
         <S.StyledDiv>
             스타일 된 컴포넌트
-            <TestComponent>일반컴포넌트</TestComponent>
-            <S.StyledButton>스타일 된 버튼</S.StyledButton>
+            <S.Input color={"darkgray"} />
+            <S.StyledButton backgroundColor={"blue"}>스타일 된 버튼</S.StyledButton>
         </S.StyledDiv>
     );
 };

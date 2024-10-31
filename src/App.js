@@ -1,14 +1,17 @@
+import { ThemeProvider } from 'styled-components';
 import './App.css';
-import ProductContainer from './docs/life-cycle/function/memoization/ProductContainer';
-import Styled01 from './pages/docs/_component/Styled01';
-
-
+import GlobalStyle from './global/globalStyle';
+import theme from './global/theme';
+import Styled03 from './pages/docs/_component/Styled03';
 
 
 function App() {
   return (
     <>
-      <Styled01/>
+      <ThemeProvider theme={theme} >
+        <GlobalStyle/>
+        <Styled03/>
+      </ThemeProvider>
     </>
   );
 }
