@@ -2,7 +2,7 @@ import { ThemeProvider } from 'styled-components';
 import './App.css';
 import GlobalStyle from './global/globalStyle';
 import theme from './global/theme';
-import ParentContainer from './docs/context/normal/ParentContainer';
+import AnimalsContainer from './docs/context/expertsolution/AnimalsContainer';
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <>
       <ThemeProvider theme={theme} >
         <GlobalStyle/>
-        <ParentContainer/>
+        <AnimalsContainer/>
       </ThemeProvider>
     </>
   );
