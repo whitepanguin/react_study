@@ -1,13 +1,14 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import S from '../style';
 
 const Layout = () => {
     return (
-        <div>
-            <header>카테고리, 서치</header>
-            <main><Outlet/></main>
-            <footer>회사 소개</footer>
-        </div>
+        <S.LayoutWrapper>
+            <S.header>헤더)카테고리, 서치</S.header>
+            <S.Main ><Outlet/></S.Main>
+            <S.Footer>푸터)회사 소개</S.Footer>
+        </S.LayoutWrapper>
     );
 };
 
